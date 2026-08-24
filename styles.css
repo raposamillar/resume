@@ -42,6 +42,7 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
+  font-size: 112.5%; /* 18px body on phones; 100% from 700px up */
 }
 
 body {
@@ -390,6 +391,10 @@ footer {
 }
 
 @media (min-width: 700px) {
+  html {
+    font-size: 100%;
+  }
+
   .header-inner {
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: 1.5rem;
@@ -538,6 +543,10 @@ html[data-theme="dark"] {
 }
 
 @media print {
+  html {
+    font-size: 100%;
+  }
+
   body {
     background: #fff;
     color: #000;
