@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script>
       {
+        document.documentElement.classList.add("js");
         try {
           const theme = localStorage.getItem("resume-appearance");
           if (theme === "light" || theme === "dark") {
@@ -31,25 +32,65 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
+    <header class="site-header" id="top" tabindex="-1">
       <div class="header-inner">
-        <fieldset class="appearance">
-          <legend><span>Appearance</span></legend>
-          <div class="appearance-options">
-            <label>
-              <input type="radio" name="appearance" value="auto" checked />
-              Auto
-            </label>
-            <label>
-              <input type="radio" name="appearance" value="light" />
-              Light
-            </label>
-            <label>
-              <input type="radio" name="appearance" value="dark" />
-              Dark
-            </label>
-          </div>
-        </fieldset>
+        <div class="header-bar">
+          <nav class="section-nav" aria-label="Resume sections">
+            <button
+              type="button"
+              class="nav-toggle"
+              aria-expanded="false"
+              aria-controls="section-nav-list"
+            >
+              <svg
+                class="nav-toggle-icon"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M4 7h16" />
+                <path d="M4 12h16" />
+                <path d="M4 17h16" />
+              </svg>
+              <span class="nav-toggle-text">Menu</span>
+            </button>
+            <ul id="section-nav-list" class="section-nav-list" role="list">
+              <li><a href="#summary-heading">Summary</a></li>
+              <li>
+                <a href="#accessibility-heading">Accessibility Experience</a>
+              </li>
+              <li>
+                <a href="#experience-heading">Professional Experience</a>
+              </li>
+              <li><a href="#skills-heading">Skills</a></li>
+              <li><a href="#education-heading">Education</a></li>
+              <li><a href="#work-heading">Selected Work</a></li>
+            </ul>
+          </nav>
+          <fieldset class="appearance">
+            <legend class="visually-hidden">Appearance</legend>
+            <div class="appearance-options">
+              <label>
+                <input type="radio" name="appearance" value="auto" checked />
+                Auto
+              </label>
+              <label>
+                <input type="radio" name="appearance" value="light" />
+                Light
+              </label>
+              <label>
+                <input type="radio" name="appearance" value="dark" />
+                Dark
+              </label>
+            </div>
+          </fieldset>
+        </div>
         <div class="identity">
           <h1>Lisa Raposa Millar</h1>
           <p class="role">Web Accessibility &amp; Editorial Professional</p>
@@ -143,7 +184,7 @@
               goals
             </li>
             <li>
-              Collaborate on responsive implementation across 8 sites
+              Collaborate on responsive implementation across 10 sites
               (WordPress, Wix, and Squarespace)
             </li>
           </ul>
@@ -265,6 +306,29 @@
     <footer>
       <p>Lisa Raposa Millar · Toronto, ON</p>
     </footer>
+    <a
+      class="back-to-top"
+      href="#top"
+      aria-label="Back to top"
+      aria-hidden="true"
+      inert
+    >
+      <svg
+        class="back-to-top-icon"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </a>
     <script type="module" src="appearance.js"></script>
   </body>
 </html>
