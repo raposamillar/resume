@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#2F5496" />
+    <meta
+      name="description"
+      content="Resume of Lisa Raposa Millar, a web accessibility and editorial professional based in Toronto."
+    />
+    <title>Lisa Raposa Millar — Web Accessibility &amp; Editorial Professional</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      {
+        try {
+          const theme = localStorage.getItem("resume-appearance");
+          if (theme === "light" || theme === "dark") {
+            document.documentElement.dataset.theme = theme;
+          }
+        } catch {
+          // Ignore unavailable storage so first paint still works.
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <fieldset class="appearance">
+          <legend><span>Appearance</span></legend>
+          <div class="appearance-options">
+            <label>
+              <input type="radio" name="appearance" value="auto" checked />
+              Auto
+            </label>
+            <label>
+              <input type="radio" name="appearance" value="light" />
+              Light
+            </label>
+            <label>
+              <input type="radio" name="appearance" value="dark" />
+              Dark
+            </label>
+          </div>
+        </fieldset>
+        <div class="identity">
+          <h1>Lisa Raposa Millar</h1>
+          <p class="role">Web Accessibility &amp; Editorial Professional</p>
+        </div>
+        <address class="contact-block">
+          <ul class="contact" role="list" aria-label="Contact information">
+            <li>
+              <span class="contact-label">Location:</span>
+              <span>Toronto, ON</span>
+            </li>
+            <li>
+              <span class="contact-label">Email:</span>
+              <a href="mailto:lisa.raposamillar@gmail.com"
+                >lisa.raposamillar@gmail.com</a
+              >
+            </li>
+            <li>
+              <span class="contact-label">LinkedIn:</span>
+              <a class="contact-url" href="https://www.linkedin.com/in/lisa-raposa-millar"
+                >linkedin.com/<wbr />in/<wbr />lisa-raposa-millar</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <p>
+          Accessibility and editorial professional with hands-on experience
+          editing WebVTT captions for WordPress Accessibility Day using
+          Git-based workflows. Authorized to work in Canada and the U.S.
+        </p>
+      </section>
+
+      <section aria-labelledby="accessibility-heading">
+        <h2 id="accessibility-heading">Accessibility Experience (Volunteer)</h2>
+        <article class="job" aria-labelledby="wpad-role">
+          <header class="job-header">
+            <h3 id="wpad-role">
+              Organizer &amp; Video Captioner, Event Media Team
+              <span class="org">WordPress Accessibility Day · Remote</span>
+            </h3>
+            <p class="meta">
+              <time datetime="2026-02">Feb 2026</time>–present
+            </p>
+          </header>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/wpa11yday/conference/pulls?q=is%3Apr+is%3Amerged+author%3Araposamillar"
+                >Edit WebVTT captions for twelve 2020 recordings using Subtitle
+                Editor</a
+              >
+            </li>
+            <li>Use VS Code and GitHub (CLI) to upload caption files</li>
+            <li>
+              Speaker Ranking Team Member: evaluated 87 speaker applications for
+              clarity, diversity, and audience fit
+            </li>
+            <li>
+              Recorded two WPAD 2026 webinars with speakers in Europe and Africa
+              using Zoom
+            </li>
+            <li>Collaborate with a distributed team via Slack</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Professional Experience</h2>
+        <article class="job" aria-labelledby="freelance-role">
+          <header class="job-header">
+            <h3 id="freelance-role">
+              Freelance Writer &amp; Content Strategist
+              <span class="org">Hybrid · Canada/U.S.</span>
+            </h3>
+            <p class="meta">
+              <time datetime="2021-11">Nov 2021</time>–present
+            </p>
+          </header>
+          <ul>
+            <li>
+              Lead client discovery and define website information architecture
+              and navigation
+            </li>
+            <li>
+              Write original web content and page copy aligned to audience and
+              goals
+            </li>
+            <li>
+              Collaborate on responsive implementation across 8 sites
+              (WordPress, Wix, and Squarespace)
+            </li>
+          </ul>
+        </article>
+
+        <article class="job" aria-labelledby="studio-role">
+          <header class="job-header">
+            <h3 id="studio-role">
+              Co-founder &amp; Piano Instructor
+              <span class="org"
+                >Raposa Millar Piano &amp; Theory Studio · Toronto, ON</span
+              >
+            </h3>
+            <p class="meta">
+              <time datetime="2017-01">Jan 2017</time>–present
+            </p>
+          </header>
+          <ul>
+            <li>Build and maintain studio website (HTML/CSS/JavaScript)</li>
+            <li>
+              Teach piano and provide accompaniment for recitals and exams
+            </li>
+            <li>
+              Adjudicate festivals, evaluating 100+ performances in multi-day
+              events and delivering written feedback
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <dl class="skills">
+          <div>
+            <dt>Accessibility</dt>
+            <dd>WebVTT (.vtt), audio-to-caption accuracy, Subtitle Editor</dd>
+          </div>
+          <div>
+            <dt>Web</dt>
+            <dd>WordPress (Elementor Pro), HTML5, CSS3, JavaScript</dd>
+          </div>
+          <div>
+            <dt>Tools &amp; Workflow</dt>
+            <dd>
+              Git &amp; GitHub (CLI), Cursor (AI), VS Code, Slack, Calendly,
+              Trello, Harvest, Mailchimp
+            </dd>
+          </div>
+          <div>
+            <dt>UX &amp; Design</dt>
+            <dd>Figma, Prototyping</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <article class="edu" aria-labelledby="edu-brainstation">
+          <header class="job-header">
+            <h3 id="edu-brainstation">BrainStation — Toronto, ON</h3>
+            <p class="meta"><time datetime="2025-03">Mar 2025</time></p>
+          </header>
+          <p class="credential">Certificate in UX Design</p>
+          <p>User research, personas, accessibility, and prototyping in Figma</p>
+        </article>
+        <article class="edu" aria-labelledby="edu-uoft">
+          <header class="job-header">
+            <h3 id="edu-uoft">University of Toronto SCS (Online) — Toronto, ON</h3>
+            <p class="meta"><time datetime="2022-12">Dec 2022</time></p>
+          </header>
+          <p class="credential">Certificate in Coding</p>
+          <p>Full-stack JavaScript bootcamp</p>
+        </article>
+        <article class="edu" aria-labelledby="edu-eastman">
+          <header class="job-header">
+            <h3 id="edu-eastman">Eastman School of Music — Rochester, NY</h3>
+            <p class="meta"><time datetime="2010-03">Mar 2010</time></p>
+          </header>
+          <p class="credential">Doctor of Musical Arts (DMA)</p>
+          <p>
+            Specialization: Piano Accompanying &amp; Chamber Music<br />
+            Excellence in Accompanying Award
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="work-heading">
+        <h2 id="work-heading">Selected Work</h2>
+        <ul class="selected-work">
+          <li>
+            <span class="work-type">Writing —</span>
+            <cite class="work-title"
+              ><a
+                href="https://www.canva.com/design/DAG_Dpea3GE/-DLUVm3em_FYjsjF94qRBw/view?utm_content=DAG_Dpea3GE&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h324a9e1f37#18"
+                >“Bach, Beethoven and the Boys”</a
+              ></cite
+            > (book review) ·
+            <cite>ORMTA Notes Magazine</cite>, Spring 2026 (p. 18)
+          </li>
+          <li>
+            <span class="work-type">Writing —</span>
+            <cite class="work-title"
+              ><a href="https://irun.ca/racing-news/30-for-30-happy-birthday-stories-from-the-chilly-half/"
+                >“Finding My Momentum”</a
+              ></cite
+            > ·
+            <cite>iRun Magazine</cite>, Feb 2026
+          </li>
+          <li>
+            <span class="work-type">Website —</span>
+            <a href="https://raposamillar.ca">raposamillar.ca</a>
+            · Studio site (designed, built &amp; written; HTML/CSS/JavaScript,
+            hosted on GitHub)
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lisa Raposa Millar · Toronto, ON</p>
+    </footer>
+    <script type="module" src="appearance.js"></script>
+  </body>
+</html>
