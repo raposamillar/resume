@@ -18,6 +18,8 @@
   --name-shadow: 0 1px 0 rgb(255 255 255 / 0.9), 0 1px 1px rgb(17 40 80 / 0.1);
   --appearance-track: rgb(255 255 255 / 0.35);
   --appearance-label: var(--header-ink);
+  --appearance-checked-bg: var(--paper);
+  --appearance-checked-ink: var(--header-ink);
   --max: 44rem;
   color-scheme: light;
 }
@@ -53,7 +55,7 @@ body {
   background: var(--paper);
   font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.45;
   overflow-wrap: break-word;
 }
 
@@ -187,11 +189,6 @@ h1 {
   text-underline-offset: 0.18em;
 }
 
-.contact-url {
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
 .contact a:hover,
 .contact a:focus-visible {
   color: var(--link-hover);
@@ -205,7 +202,7 @@ main {
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.55rem;
 }
 
 main > section:last-child {
@@ -213,7 +210,7 @@ main > section:last-child {
 }
 
 h2 {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.6rem;
   padding-top: 0.55rem;
   border-top: 1px solid var(--line);
   color: var(--heading);
@@ -238,7 +235,7 @@ h3 {
 
 .job,
 .edu {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.1rem;
 }
 
 .job-header {
@@ -277,7 +274,7 @@ ul {
 }
 
 li {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.28rem;
 }
 
 .skills {
@@ -346,11 +343,12 @@ main:focus,
 footer {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0.85rem max(1.15rem, env(safe-area-inset-right))
-    max(2rem, env(safe-area-inset-bottom))
+  padding: 0.65rem max(1.15rem, env(safe-area-inset-right))
+    max(0.35rem, env(safe-area-inset-bottom))
     max(1.15rem, env(safe-area-inset-left));
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.35;
   text-align: center;
 }
 
@@ -479,13 +477,28 @@ footer a:focus-visible {
 }
 
 .appearance-options label:has(input:checked) {
-  background: var(--paper);
+  background: var(--appearance-checked-bg);
+  color: var(--appearance-checked-ink);
   font-weight: 700;
 }
 
 .appearance-options label:has(input:focus-visible) {
   outline: 3px solid var(--focus);
   outline-offset: -3px;
+}
+
+html[data-theme="dark"] .appearance-options label:has(input:focus-visible) {
+  outline: 3px solid #f5f5f7;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #1e2a3a;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .appearance-options label:has(input:focus-visible) {
+    outline: 3px solid #f5f5f7;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #1e2a3a;
+  }
 }
 
 @media (min-width: 700px) {
@@ -518,10 +531,6 @@ footer a:focus-visible {
 
   .contact li {
     grid-template-columns: max-content max-content;
-  }
-
-  .contact-url {
-    white-space: nowrap;
   }
 
   .job-header {
@@ -635,7 +644,7 @@ footer a:focus-visible {
   }
 
   footer {
-    padding-bottom: max(5.25rem, calc(env(safe-area-inset-bottom) + 4.25rem));
+    padding-bottom: max(4.25rem, calc(env(safe-area-inset-bottom) + 3.5rem));
   }
 }
 
@@ -648,15 +657,17 @@ footer a:focus-visible {
     --header: #1e2a3a;
     --header-ink: #f5f5f7;
     --heading: #9cbbe8;
-    --link: #7eb6ff;
+    --link: #86bbff;
     --link-hover: #c5e0ff;
     --line: #9cbbe8;
-    --hairline: #3d4d5f;
+    --hairline: #707c89;
     --focus: #9cbbe8;
     --contact-label: #b7ccea;
     --name-shadow: 0 1px 0 rgb(0 0 0 / 0.5), 0 1px 2px rgb(0 0 0 / 0.35);
-    --appearance-track: rgb(255 255 255 / 0.25);
+    --appearance-track: rgb(255 255 255 / 0.16);
     --appearance-label: #ffffff;
+    --appearance-checked-bg: #f5f5f7;
+    --appearance-checked-ink: #1e2a3a;
   }
 }
 
@@ -668,15 +679,17 @@ html[data-theme="dark"] {
   --header: #1e2a3a;
   --header-ink: #f5f5f7;
   --heading: #9cbbe8;
-  --link: #7eb6ff;
+  --link: #86bbff;
   --link-hover: #c5e0ff;
   --line: #9cbbe8;
-  --hairline: #3d4d5f;
+  --hairline: #707c89;
   --focus: #9cbbe8;
   --contact-label: #b7ccea;
   --name-shadow: 0 1px 0 rgb(0 0 0 / 0.5), 0 1px 2px rgb(0 0 0 / 0.35);
-  --appearance-track: rgb(255 255 255 / 0.25);
+  --appearance-track: rgb(255 255 255 / 0.16);
   --appearance-label: #ffffff;
+  --appearance-checked-bg: #f5f5f7;
+  --appearance-checked-ink: #1e2a3a;
 }
 
 @media (max-width: 699px) and (prefers-reduced-motion: no-preference) {
