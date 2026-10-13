@@ -44,7 +44,7 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
-  font-size: 112.5%; /* 18px body on phones; 100% from 700px up */
+  font-size: 125%; /* 20px body on phones; 18px from 700px up */
 }
 
 body {
@@ -200,12 +200,16 @@ h1 {
 main {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 1.5rem max(1.15rem, env(safe-area-inset-right)) 2.75rem
+  padding: 1.5rem max(1.15rem, env(safe-area-inset-right)) 0
     max(1.15rem, env(safe-area-inset-left));
 }
 
 section {
   margin-bottom: 2rem;
+}
+
+main > section:last-child {
+  margin-bottom: 0;
 }
 
 h2 {
@@ -342,11 +346,27 @@ main:focus,
 footer {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 max(1.15rem, env(safe-area-inset-right))
+  padding: 0.85rem max(1.15rem, env(safe-area-inset-right))
     max(2rem, env(safe-area-inset-bottom))
     max(1.15rem, env(safe-area-inset-left));
   color: var(--muted);
   font-size: 0.95rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  text-decoration-thickness: 2px;
 }
 
 .header-bar {
@@ -470,7 +490,7 @@ footer {
 
 @media (min-width: 700px) {
   html {
-    font-size: 100%;
+    font-size: 112.5%;
   }
 
   .header-inner {
