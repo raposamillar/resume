@@ -644,7 +644,7 @@ html[data-theme="dark"] .appearance-options label:has(input:focus-visible) {
   }
 
   footer {
-    padding-bottom: max(4.25rem, calc(env(safe-area-inset-bottom) + 3.5rem));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 }
 
