@@ -341,10 +341,11 @@ main:focus,
 }
 
 footer {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0.65rem max(1.15rem, env(safe-area-inset-right))
-    max(0.35rem, env(safe-area-inset-bottom))
+  margin: 0;
+  background: var(--header);
+  border-top: 1px solid var(--hairline);
+  padding: 0.85rem max(1.15rem, env(safe-area-inset-right))
+    max(0.85rem, env(safe-area-inset-bottom))
     max(1.15rem, env(safe-area-inset-left));
   color: var(--muted);
   font-size: 0.95rem;
